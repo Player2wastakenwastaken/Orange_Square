@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#0b100e">
+  <title>Orange Square</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+
+  <header class="top-bar">
+    <h1 class="brand">Orange Square</h1>
+    <div class="stats" aria-live="polite">
+      <span class="stat"><span class="stat-label">Score</span> <strong id="score">0</strong></span>
+      <span class="stat"><span class="stat-label">Best</span> <strong id="best">0</strong></span>
+    </div>
+  </header>
+
+  <main class="stage-wrap">
+    <canvas id="game" width="720" height="960" aria-label="Orange Square playfield"></canvas>
+
+    <div id="overlay" class="overlay">
+      <div class="panel">
+        <p class="eyebrow" id="overlay-eyebrow">Ready</p>
+        <h2 id="overlay-title">Orange Square</h2>
+        <p id="overlay-copy">Dodge the slate shards. Collect the warm sparks. Stay orange.</p>
+        <button type="button" id="start-btn" class="cta">Play</button>
+        <p class="hint desktop-hint">Arrow keys or WASD · mouse drag</p>
+        <p class="hint touch-hint">Drag anywhere on the field to move</p>
+      </div>
+    </div>
+  </main>
+
+  <div class="touch-pad" id="touch-pad" aria-hidden="true">
+    <button type="button" class="pad-btn" data-dir="up" aria-label="Move up">▲</button>
+    <div class="pad-mid">
+      <button type="button" class="pad-btn" data-dir="left" aria-label="Move left">◀</button>
+      <button type="button" class="pad-btn" data-dir="down" aria-label="Move down">▼</button>
+      <button type="button" class="pad-btn" data-dir="right" aria-label="Move right">▶</button>
+    </div>
+  </div>
+
+  <script src="game.js" defer></script>
+</body>
+</html>
