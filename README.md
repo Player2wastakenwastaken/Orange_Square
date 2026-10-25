@@ -2,18 +2,29 @@
 
 Playable browser game: dodge slate shards, collect warm sparks, stay orange.
 
-## Play (no clone)
+## Play in Safari (no clone)
 
-**Safari-friendly URL (GitHub Pages):**  
+**Play now (works today):**  
+https://htmlpreview.github.io/?https://github.com/Player2wastakenwastaken/Orange_Square/blob/cursor/orange-square-game-0e67/game/index.html
+
+**Canonical GitHub Pages URL** (after Pages is enabled on this repo):  
 https://player2wastakenwastaken.github.io/Orange_Square/game/
 
-Same path in the repo: [`game/index.html`](game/index.html)
+Repo path: [`game/index.html`](game/index.html)
 
-If Pages is not live yet, open `game/index.html` locally, or serve the repo root:
+### Enable GitHub Pages (repo owner, once)
+
+1. Open **Settings → Pages**
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+3. Push to `main` (or re-run the **Deploy GitHub Pages** workflow) — see [`.github/workflows/pages.yml`](.github/workflows/pages.yml)
+
+Then open: https://player2wastakenwastaken.github.io/Orange_Square/game/
+
+Local fallback:
 
 ```bash
 python3 -m http.server 8080
-# then open http://localhost:8080/game/
+# http://localhost:8080/game/
 ```
 
 ## How to play
@@ -33,5 +44,5 @@ python3 -m http.server 8080
 
 | Path | Purpose |
 |------|---------|
-| `game/` | **Orange Square** game (this PR) |
+| `game/` | **Orange Square** game |
 | `index.html` | Title screen (separate work, if present) |
